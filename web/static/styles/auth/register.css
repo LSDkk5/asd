@@ -1,0 +1,436 @@
+body {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px 10px;
+    box-shadow: 0px 10px 37px -13px rgba(0,0,0,0.35);
+    color: grey;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.header a {
+    float: left;
+    color: grey;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a:hover {
+    color: black;
+}
+
+.header a:active {
+    color: black;
+}
+
+.header-right {
+    float: right;
+    margin-top: 20px;
+}
+
+.footer {
+    overflow: hidden;
+    background-color: rgb(47,53,67);
+    padding: 20px 10px;
+    color: #b4b4b4;
+    margin-top: 100px;
+}
+
+.footer a {
+    float: left;
+    color: #b4b4b4;
+    text-align: center;
+    padding-left: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer a:active {
+    color: white;
+}
+
+.footer-right {
+    float: right;
+}
+#filling-form {
+    width: 65vw;
+    min-height: 120px;
+    background-color: #eeeeee;
+    display: center;
+    margin-top: center;
+    border-radius: 10px;
+}
+
+
+
+/* O REJESTRACJA */
+
+
+
+@media(min-width:1250px) {
+    .container{
+    width:53%;
+    height:650px;
+    }
+
+     .register {
+        padding: 0 3.85vw;
+        height:650px;
+    }
+    
+    .pic {
+        height:650px;
+    }
+
+    .h2-reg{
+        font-size:18px;
+        width:50%;
+    }
+    .line{
+        width:50%;
+    }
+
+    .registerbtn, .btn {
+        width:37%;
+         padding: 10px 8px;
+    }
+}
+
+@media(max-width:1249px) {
+    .container{
+    width:80%;
+    height:650px;
+    }
+
+     .register {
+        padding: 0 6vw;
+        height:650px;
+    }
+    
+    .pic {
+        height:650px;
+    }
+
+    .h2-reg{
+        font-size:18px;
+        width:50%;
+    }
+    .line{
+        width:50%;
+    }
+
+    .registerbtn, .btn {
+        width:42%;
+         padding: 10px 8px;
+    }
+}
+
+@media(max-width:795px) {
+    .container{
+    width:100%;
+    min-width: 350px;
+    height:655px;
+    }
+
+    .register {
+        padding: 0 3vw;
+        height:655px;
+    }
+
+    .pic {
+        height:655px;
+    }
+
+      .h2-reg{
+        font-size:18px;
+        width:50%;
+    }
+    .line{
+        width:50%;
+    }
+
+    .registerbtn, .btn {
+        width:45%;
+    }
+
+   
+
+    
+    
+}
+
+@media(max-width:504px) {
+    .container, .register, .pic{
+        height:700px;
+    }
+
+
+    .h2-reg{
+        font-size:18px;
+        width:60%;
+    }
+    .line{
+        width:40%;
+    }
+
+    .pic img {
+    width:100%;
+    }
+
+
+     .sex  {
+        font-size:15px;
+    }  
+
+    .registerbtn, .btn {
+        font-size:11px;
+        padding:5px 4px;
+        height:35px;
+        width:45%;
+    }
+    .btn{
+        margin-right: 0;
+    }
+
+    .register p:last-of-type{
+        font-size:12px;
+    }
+
+        .pic h3, .pic p {
+        font-size:1em;
+    } 
+
+}
+@media(max-width:415px){
+    .h2-reg{
+        width: 79%;
+    }
+
+    .line{
+        width:21%;
+    }
+}
+
+
+
+
+
+
+
+
+.container{
+    margin:80px auto 0;
+    box-sizing: border-box;
+    position: relative;  
+    box-shadow: 0px 10px 37px -13px rgba(0,0,0,0.35);
+}
+
+.register{
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    width: 60%;
+    background: #fefefe;
+    position: absolute;
+    top:0;
+    right:0;
+    text-align: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.sth{
+    width: 100%;
+    position: relative;
+    height: 40px;
+
+}
+
+.h2-reg{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 26px;
+    text-align:center;
+    margin: 20px 0;
+    padding: 0 1vw;
+    box-sizing:border-box;
+}
+
+.line{
+     display: inline-block;
+     position: absolute;
+     box-sizing:border-box; 
+     top: 0;
+     right:0;
+     margin:20px 0;
+     height: 26px;
+    
+     
+}
+
+.line span{
+    content:'';
+    background: rgb(8, 0, 255);
+    height: 3px;
+    width: 95%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-3px);
+    text-align:center;
+    right:0;
+}
+
+.enter-data{
+    width: 100%;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    background: lightgrey;
+    border:none;
+    border-radius: 3px;
+    margin: 8px 0;
+}
+
+
+#male, #female {
+    display: none;
+}
+
+.sex{
+    display: inline-block;
+    width: 50%;
+    background: #f5f5f5;
+    box-sizing: border-box;
+    height: 38px;
+    position: absolute;
+    border:1px solid gray;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+
+
+.sex:last-child{
+    right:0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.sex:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+.pic{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    width:40%;
+    background: rgb(8, 0, 255);
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 1vw 3vw;
+    color:#efefef;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-weight: 1510;
+}
+
+.pic h3, .pic p {
+    text-align: left;
+}
+
+
+
+
+
+.registerbtn, .btn {
+    border:none;
+    border-radius: 3px;
+  
+     cursor: pointer;
+}
+
+.registerbtn {
+    color:white;
+    background:rgb(8, 0, 255);
+    margin-right: 2vw;
+
+}
+
+
+.loginbtn {
+    color:white;
+    background:rgb(8, 0, 255);
+
+}
+
+.btn{
+    background: #fefefe;
+    border:1px solid gray;
+}
+
+.btn a{
+    color:black;
+    text-decoration: none;
+}
+
+.left-right-line {
+    text-align: center;
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+  }
+  
+  .left-right-line::after, .left-right-line::before {
+    content: '';
+    width: 40%;
+    height: 1px;
+    position: absolute;
+    background: gray;
+    top: 9px;
+  }
+  
+  .left-right-line::after {
+    left: 0px;
+  }
+  
+  .left-right-line::before {
+    right: 0px;
+  }
+  
+  .btn.fb {
+    background: #3b5998;
+    color: white;
+    margin-right: 2vw;
+  }
+  
+  .btn.google {
+    background: #e0e0e0;
+  }
+
+/* O REJESTRACJA */

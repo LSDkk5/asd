@@ -1,0 +1,141 @@
+body {
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: #fefefe;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px 10px;
+  box-shadow: 0px 10px 37px -13px rgba(0, 0, 0, 0.35);
+  color: grey;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.header a {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header a:active {
+  color: black;
+}
+
+.header-right {
+  float: right;
+  margin-top: 20px;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: #2f3543;
+  padding: 20px 10px;
+  color: #b4b4b4;
+  box-sizing: border-box;
+}
+
+.footer a {
+  float: left;
+  color: #b4b4b4;
+  text-align: center;
+  padding-left: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer a:active {
+  color: white;
+}
+
+.footer-right {
+  float: right;
+}
+
+.container-reports {
+  min-height: 750px;
+}
+
+.offers-list {
+  background: purple;
+  width: 100%;
+  overflow: auto;
+  height: 350px;
+  padding-top: 25px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.offer {
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+  background: #fefefe;
+  border-radius: 25px;
+  margin: 0 30px;
+  padding-top: 10px;
+  vertical-align: top;
+}
+
+.active-reports {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+  max-width: 850px;
+  margin: 2vw auto;
+  border-radius: 15px;
+  padding: 1vw;
+}
+
+.active-reports .btn {
+  width: 250px;
+  margin: 5px 0;
+  height: 35px;
+}
+
+.active-reports img {
+  width: 90%;
+}
+
+.active-reports-child {
+  text-align: left;
+  padding-left: 1vw;
+}
+
+.purple-text {
+  color: purple;
+}
+
+.btn {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  background: #3254a8;
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fefefe;
+  font-size: 18px;
+}

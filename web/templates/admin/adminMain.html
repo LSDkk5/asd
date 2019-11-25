@@ -1,0 +1,66 @@
+{% extends "layaout.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/admin/adminMain.css')}}">{% endblock style %}
+{% block title %}{% endblock title %}
+
+
+{% block content %}
+<script type="text/babel">
+    class App extends React.Component {
+    render() {    
+        return ( 
+        <main>  
+    <h1>Panel administracyjny</h1>
+    <div class="admin-container">
+        <section class="section">
+            <h2>Witaj Mastermind!</h2>
+            <div class="grid">
+                <div class="grid-child">
+                    <h3 class="text-center"> 
+                    <img src="{{url_for('static', filename='assets/images/error_outline-24px.svg')}}" alt=""/>
+                    Userzy online : 1234
+                    </h3>
+                    <h3 class="text-center">
+                    <img src="{{url_for('static', filename='assets/images/error_outline-24px.svg')}}" alt=""/>
+                    Userzy łącznie : 35000
+                    </h3>
+                    <h3 class="text-center">
+                    <img src="{{url_for('static', filename='assets/images/error_outline-24px.svg')}}" alt=""/>
+                    Zbanowani : 196
+                    </h3>
+                    <h3 class="text-center">
+                    <img src="{{url_for('static', filename='assets/images/error_outline-24px.svg')}}" alt=""/>
+                    Zablokowani : 251
+                    </h3>
+                </div>
+                <div class="grid-child">
+                    <h3 class="text-center">
+                    <img src="{{url_for('static', filename='assets/images/error_outline-24px.svg')}}" alt=""/>
+                    Zgłoszeń łącznie : 98
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <section class="active-reports">
+            <img src="{{url_for('static', filename='assets/images/logo.png')}}" alt=""/>
+            <div class="active-reports-child">
+                <h2 class="purple-text">Aktywne zgłoszenia (0)</h2>
+                <p>Zobacz oferty zgłoszone przez użytkowników</p>
+            </div>
+        </section>
+
+        <section class="active-reports">
+            <img src="{{url_for('static', filename='assets/images/logo.png')}}" alt=""/>
+            <div class="active-reports-child">
+                <h2 class="purple-text">Znajdź użytkownika</h2>
+                <p>Sprawdź i zarządzaj użytkownikiem</p>
+            </div>
+        </section>
+    </div>
+</main> 
+        )
+    }            
+}
+    ReactDOM.render(<App/>, document.getElementById('App'));
+</script>
+{% endblock content %}

@@ -1,0 +1,166 @@
+body {
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px 10px;
+  box-shadow: 0px 10px 37px -13px rgba(0, 0, 0, 0.35);
+  color: grey;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.header a {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header a:active {
+  color: black;
+}
+
+.header-right {
+  float: right;
+  margin-top: 20px;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: #2f3543;
+  padding: 20px 10px;
+  color: #b4b4b4;
+  margin-top: 100px;
+}
+
+.footer a {
+  float: left;
+  color: #b4b4b4;
+  text-align: center;
+  padding-left: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer a:active {
+  color: white;
+}
+
+.footer-right {
+  float: right;
+}
+
+#filling-form {
+  width: 65vw;
+  min-height: 120px;
+  background-color: #eeeeee;
+  display: center;
+  margin-top: center;
+  border-radius: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  background: #fefefe;
+  margin: 10px auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 2vw 5vw;
+  overflow-y: hidden;
+}
+
+.container img {
+  max-width: 600px;
+  position: relative;
+}
+
+.bottom-line {
+  border-bottom: 2px solid purple;
+  margin: 10px auto;
+  text-align: center;
+}
+
+b {
+  color: red;
+}
+
+.gray-text-center {
+  color: gray;
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .big-padding {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .big-padding {
+    padding: 0 50px;
+  }
+  img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1, h2 {
+    font-size: 1rem;
+  }
+  p, h2, h3 {
+    text-align: left;
+  }
+  img {
+    width: 90%;
+  }
+  .bottom-line {
+    width: 80%;
+    padding: 5px;
+  }
+  .big-padding {
+    padding: 0 15px;
+  }
+}
+
+.moving {
+  transform: translateX(-500px);
+  opacity: 0;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.doMnieMojaDesko {
+  animation: move 1.5s  .1s 1  forwards;
+}

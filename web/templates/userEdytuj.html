@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='./styles/userEdytuj.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="{{url_for('static', filename='./scripts/react.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/reactDom.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/babelScript.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='./styles/fonts/fonts.css')}}">
+
+    <!--<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">-->>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <a href="#default" class="logo"><img src="{{url_for('static', filename='./assets/images/logo.png')}}"></a>
+            <div class="header-right">
+                <a href="#home">O Nas</a>
+                <a href="#contact">Kontakt</a>
+                <a href="#about">Logowanie</a>
+            </div>
+        </div>
+    </header>
+
+<div id="App">  
+    
+</div>                  
+
+    <footer>
+
+        <div class="footer">
+            <a>CoZa500Plus.pl</a>
+            <div class="footer-right">
+                <a href="#home">O Nas</a>
+                <a href="#contact">Kontakt</a>
+                <a href="#about">Logowanie</a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+<script type="text/babel">
+
+    class App extends React.Component {
+
+        render() {      
+
+            return(
+<div class="edit-data">
+        <h2>Edytuj dane</h2>
+        <label class="edit-img"><input type="file"/><img src=""/></label>
+        <p>Nazwa</p>
+        <input type="text"/><br/>
+        <div class="sth">
+            <input id="m" type="radio" name="plec" value='m' />
+            <label for="m" class="sex">Mężczyzna</label>
+            <input id="k" type="radio" name="plec" value='k'/> 
+            <label for="k" class="sex">Kobieta</label><br/>
+        </div>
+        <a href="#"><input type="button" class="button change-pass" value="Zmień hasło"/></a>
+        <a href="../user-main/user.html"><input type="button" value="Anuluj" class="button"/></a>
+        <button class="button">Zatwierdz</button>
+</div>
+            )
+        }
+    }
+    
+    ReactDOM.render(<App/>, document.getElementById('App'));
+
+</script>
+
+</html>
+

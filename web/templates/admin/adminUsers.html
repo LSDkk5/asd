@@ -1,0 +1,46 @@
+{% extends "layaout.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/admin/adminUsers.css')}}">{% endblock style %}
+{% block title %}{% endblock title %}
+
+
+{% block content %}
+<script type="text/babel">
+    class App extends React.Component {
+    render() {    
+        return ( 
+<main>  
+    <div class="container-users">
+        <section class="active-reports">
+            <img src="{{url_for('static', filename='./assets/images/logo.png')}}" alt=""/>
+            <div class="active-reports-child">
+                <h2 class="purple-text">Znajdź użytkownika</h2>
+                <h3>Sprawdź użytkownika i zarządzaj nim.</h3>
+                <button class="btn">Wróć do panelu admina</button>
+            </div>
+        </section>   
+
+        <div class="search">
+            <div class="before"><input placeholder="Nazwa/e-mail" type="text" class="search-child-input"/></div>
+            <button class="btn">Szukaj</button>
+        </div>
+        <div class="search-result">
+            <div class="user">
+                <img src="{{url_for('static', filename='./assets/images/logo.png')}}" alt="" class="user-img"/>
+                <h3 class="user-desc">Kacperr</h3>
+                <h3 class="user-desc">#2111</h3>
+                <h3 class="user-desc">Kacper@coza500plus.com</h3>
+                <p class="option">Zbanuj</p>
+                <p class="option">Napisz</p>
+                <p class="option">Zablokuj</p>
+            </div>
+            
+        </div>
+    </div>
+</main> 
+        )
+    }            
+}
+    ReactDOM.render(<App/>, document.getElementById('App'));
+</script>
+{% endblock content %}

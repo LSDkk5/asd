@@ -1,0 +1,328 @@
+{% extends "layout.html" %}
+ 
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/offers.css')}}">{% endblock style %}
+{% block title %}<title>Jakiś tytuł</title>{% endblock title %}
+ 
+ 
+{% block content %}
+<script type="text/babel">
+    class App extends React.Component {
+        state = {
+            items:[
+                {id:0, itemName:'Rowerek 1', price:123, givenPrice:699, hots:50, imgUrl:"watch.jpeg", category:'cat1'},
+                {id:1, itemName:'Rowerek 2', price:321, givenPrice:'', hots:0, imgUrl:"twarz.png", category:'cat3'},
+                {id:2, itemName:'Rowerek 3', price:999, givenPrice:5, hots:666, imgUrl:"logo.png", category:'cat2'},
+                {id:3, itemName:'Rowerek 4', price:999, givenPrice:1, hots:69, imgUrl:"share.png", category:'cat2'},
+                {id:4, itemName:'Rowerek 5', price:5, givenPrice:699, hots:420, imgUrl:"item.png", category:'cat5'} ,
+                {id:5, itemName:'Rowerek 6', price:444, givenPrice:699, hots:1337, imgUrl:"item.png", category:'cat6'},
+                {id:6, itemName:'Rowerek 7', price:9876, givenPrice:6469, hots:2137, imgUrl:"item.png", category:'cat1'},
+                {id:7, itemName:'Rowerek 1', price:123, givenPrice:699, hots:50, imgUrl:"watch.jpeg", category:'cat7'},
+                {id:8, itemName:'Rowerek 2', price:321, givenPrice:'', hots:0, imgUrl:"twarz.png", category:'cat3'},
+                {id:9, itemName:'Rowerek 3', price:999, givenPrice:5, hots:666, imgUrl:"logo.png", category:'cat2'},
+                {id:10, itemName:'Rowerek 4', price:999, givenPrice:1, hots:69, imgUrl:"share.png", category:'cat5'},
+                {id:11, itemName:'Rowerek 5', price:5, givenPrice:699, hots:420, imgUrl:"item.png", category:'cat4'} ,
+                {id:12, itemName:'Rowerek 6', price:444, givenPrice:699, hots:1337, imgUrl:"item.png", category:'cat7'},
+                {id:13, itemName:'Rowerek 7', price:9876, givenPrice:6469, hots:2137, imgUrl:"item.png", category:'cat6'},
+                {id:14, itemName:'Rowerek 1', price:123, givenPrice:699, hots:50, imgUrl:"watch.jpeg", category:'cat1'},
+                {id:15, itemName:'Rowerek 2', price:321, givenPrice:'', hots:0, imgUrl:"twarz.png", category:'cat3'},
+                {id:16, itemName:'Rowerek 3', price:999, givenPrice:5, hots:666, imgUrl:"logo.png", category:'cat2'},
+                {id:17, itemName:'Rowerek 4', price:999, givenPrice:1, hots:69, imgUrl:"share.png", category:'cat2'},
+                {id:18, itemName:'Rowerek 5', price:5, givenPrice:699, hots:420, imgUrl:"item.png", category:'cat5'} ,
+                {id:19, itemName:'Rowerek 6', price:444, givenPrice:699, hots:1337, imgUrl:"item.png", category:'cat6'},
+                {id:20, itemName:'Rowerek 7', price:9876, givenPrice:6469, hots:2137, imgUrl:"item.png", category:'cat1'},
+                {id:21, itemName:'Rowerek 1', price:123, givenPrice:699, hots:50, imgUrl:"watch.jpeg", category:'cat7'},
+                {id:22, itemName:'Rowerek 2', price:321, givenPrice:'', hots:0, imgUrl:"twarz.png", category:'cat3'},
+                {id:23, itemName:'Rowerek 3', price:999, givenPrice:5, hots:666, imgUrl:"logo.png", category:'cat2'},
+                {id:24, itemName:'Rowerek 4', price:999, givenPrice:1, hots:69, imgUrl:"share.png", category:'cat5'},
+                {id:25, itemName:'Rowerek 5', price:5, givenPrice:699, hots:420, imgUrl:"item.png", category:'cat4'} ,
+                {id:26, itemName:'Rowerek 6', price:444, givenPrice:699, hots:1337, imgUrl:"item.png", category:'cat7'},
+                {id:27, itemName:'Rowerek 7', price:9876, givenPrice:6469, hots:2137, imgUrl:"item.png", category:'cat6'}
+            ],
+            actualItem:'empty',
+            typeOfOffer:'',
+            position:0
+        }
+       
+        handleClickShowOffer = (e) => {
+            if(document.querySelector('.margin-bottom')){
+            let deleteSpace = document.querySelector('.margin-bottom')
+            deleteSpace.classList.remove('margin-bottom')
+            }
+            this.setState({
+                actualItem : this.state.items[e.target.parentNode.parentNode.id]
+            })
+            e.target.parentNode.parentNode.nextElementSibling.classList.add('margin-bottom')
+            this.setState({
+                position:
+                    e.target.parentNode.parentNode.getBoundingClientRect().top + 
+                    window.scrollY + e.target.parentNode.parentNode.offsetHeight -130
+            })
+        }
+
+        handleClick = (e) => {
+            if(document.querySelector('.margin-bottom')){
+            let deleteSpace = document.querySelector('.margin-bottom')
+            deleteSpace.classList.remove('margin-bottom')
+            }
+            
+            this.setState({
+                typeOfOffer: e.target.id,
+                actualItem : 'empty'
+            })
+        }
+        handleClickLike = (e) => {
+            e.target.nextElementSibling.classList.toggle('hot-anime')
+            e.target.nextElementSibling.classList.toggle('none')
+            if(e.target.attributes.src.nodeValue ==="hot.png"){
+               e.target.attributes.src.nodeValue = "not-hot.png"  
+            }
+            else {
+               e.target.attributes.src.nodeValue = "hot.png"  
+            }
+            
+        }
+
+        handleCLickExit = () => {
+            let deleteSpace = document.querySelector('.margin-bottom')
+            deleteSpace.classList.remove('margin-bottom')
+            this.setState({
+                actualItem:'empty'
+            })
+        }
+
+        handleClickLike2 = (e) => {     
+
+            let inc = document.querySelector('.increase')
+            let dec = document.querySelector('.decrease')
+            inc.classList.remove('up')
+            dec.classList.remove('up')
+            if(e.target.attributes.src.nodeValue ==="hot.png"){
+               e.target.attributes.src.nodeValue = "not-hot.png"
+               dec.classList.add('up')       
+            }
+            else {
+               e.target.attributes.src.nodeValue = "hot.png"  
+               inc.classList.add('up')
+               
+            }       
+        }
+
+        handleClickReport = () => {
+            const rep = document.getElementById("report1")
+            rep.classList.toggle('none')
+            header.classList.toggle('blur')
+            contentt.classList.toggle('blur')  
+            footer.classList.toggle('blur')
+        }
+        handleClickReport2 = () => { 
+            const rep2 = document.getElementById("report2")
+            const rep = document.getElementById("report1")
+            rep.classList.toggle('none')
+            rep2.classList.toggle('none')
+            
+        }
+        handleClickEndReport = () => {
+            const rep2 = document.getElementById("report2")
+            rep2.classList.toggle('none')
+            header.classList.toggle('blur')
+            contentt.classList.toggle('blur')  
+            footer.classList.toggle('blur')
+        }
+        
+
+        render() {
+
+            
+            
+            const header = document.getElementById("header");
+            const contentt = document.getElementById("contentt");
+            const footer = document.getElementById("footer");
+
+            const listOfItems = this.state.items.length ? ( 
+              this.state.items.filter( item => item.category === this.state.typeOfOffer)
+              .map(item => {
+            return (
+                <div class="outside-item" key={item.id}>
+                    <div id={item.id} class="single-item" >
+                        <img src="{{url_for('static', filename='assets/images/fav.png')}}" alt="fav"/>
+                        <img src="{{url_for('static', filename='assets/images/share.png')}}" alt="share"/>
+                        <div class="hot">
+                        <img src="{{url_for('static', filename='assets/images/not-hot.png')}}" alt="hot" onClick={this.handleClickLike} />
+                        <div class="none">{item.hots}</div>
+                        </div>
+                        <img class="img" src={item.imgUrl} alt=""/>
+
+                        <h2>{item.itemName}</h2>
+                        <div class="normal-text blue-text">Cena: {item.price}  zł</div>
+                            <a href="#act">
+                                <button class="btn" onClick={this.handleClickShowOffer}>Przejdź do oferty</button>
+                            </a>
+                    </div>
+                <div class="hidden"></div>
+                </div>
+                   )  
+              })   
+                    ) : (
+            <div>Aktualnie nie ma żadnych ofert.</div>
+                        )
+
+
+        const type = this.state.typeOfOffer ? (
+            <div class="line-under-text">Wybierz type ofert</div>
+        ) : (
+            <div class="line-under-text">Oferty dla Ciebie</div>
+        )
+
+        const item = this.state.actualItem
+
+        let position = {
+            top:this.state.position
+        }
+
+        const actualItem = this.state.actualItem !=='empty' ? (
+            
+                <div id="act" class="shown-offer" key={item.id} style={position}>
+                    <div class="shown-offer-mini-img">
+                        <img class="pointer" src="{{url_for('static', filename='assets/images/fav.png')}}" alt="fav"/>
+                    </div>
+                    <div class="shown-offer-mini-img" >
+                        <img src="{{url_for('static', filename='assets/images/not-hot.png')}}" alt="hot" class="pointer" onClick={this.handleClickLike2}/>
+                        <span>{item.hots}</span>
+                        <div class="increase">+ 1</div>
+                        <div class="decrease">- 1</div>
+                    </div>
+
+
+                    <div class="shown-offer-grid">
+                        <div class="shown-offer-img">   
+                            <img src={item.imgUrl} alt=""/>       
+                        </div>
+                        <div class="shown-offer-description">
+                            <h1 class="shown-offer-h1">{item.itemName}</h1> <span>www.loreeem.com</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo neque earum,
+                            vitae facere placeat, quos distinctio perspiciatis quasi quas ab nam 
+                            repellendus reiciendis quidem explicabo vel, assumenda quaerat optio possimus.</p>
+                            <span class="pointer" onClick={this.handleClickReport}>Zgłoś ofertę</span> <h2 class="blue-text">{item.price} zł</h2>
+                            <button class="btn">Kup</button>   
+                            <div class="exit-flying" onClick={this.handleCLickExit}>
+                                <img src="{{url_for('static', filename='assets/images/x.png')}}" alt=""/>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+) : ('')
+
+            return(
+<main>          
+    <div>
+        <div id="contentt" class="big-container" >
+            {type} 
+
+            
+            <div class="types-of-offer">
+
+                <div class="single-type" >
+                    <input type="radio" id="cat1" name="type" onClick={this.handleClick}/>
+                    <label class="single-type-label" for="cat1">
+                        <h3>Shrek</h3>
+                    </label>
+                </div>
+                
+                <div class="single-type">
+                    <input type="radio" id="cat2" name="type" onClick={this.handleClick}/>
+                    <label class="single-type-label" for="cat2">
+                        <h3>Shrek 2</h3>
+                    </label>
+                </div>
+
+
+                <div class="single-type">
+                    <input type="radio" id="cat3" name="type" onClick={this.handleClick}/>
+                    <label class="single-type-label" for="cat3">
+                        <h3>Shrek 3</h3>
+                    </label>
+                </div>
+
+
+                <div class="single-type">
+                    <input type="radio" id="cat4" name="type" onClick={this.handleClick}/>
+                    <label class="single-type-label" for="cat4">
+                        <h3>Shrek 4</h3>
+                    </label>
+                </div>
+
+
+                <div class="single-type">
+                    <input type="radio" id="cat5" name="type" onClick={this.handleClick}/>
+                    <label class="single-type-label" for="cat5">
+                        <h3>Shrek Forever</h3>
+                    </label>
+                </div>
+
+                
+                <div class="single-type">
+                    <input type="radio" id="cat6" name="type" onClick={this.handleClick}/>
+                    <label class="single-type-label" for="cat6">
+                        <h3>Shrek 5</h3>
+                    </label>
+                </div>
+            </div>
+
+            <div class="sort">
+            <div class="text" >Sortuj według:    </div>
+                <div class="select">
+                    <select name="sort-1" id="sort-1">
+                        <option value="0">Nazwy</option>
+                        <option value="1">Kategorii</option>
+                        <option value="2">Ceny</option>
+                        <option value="3">Popularności</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sort" >
+            <div class="text">Cena:</div>
+                <div class="select">
+                    <select name="sort-2" id="sort-2">
+                        <option value="1">Malejąco</option>
+                        <option value="2">Rosnąco</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container-offers">
+            {listOfItems}
+            {actualItem}
+            </div>
+        </div>   
+       
+        <div id="report1" class="report none">
+            <div class="exit-flying" onClick={this.handleClickReport}>
+                <img src="{{url_for('static', filename='assets/images/x.png')}}" alt=""/>
+            </div>
+            <h3 class="purple-text">ZGŁOŚ OFERTĘ</h3>
+            <h3>Dlaczego chcesz ją zgłosić?</h3>
+            <input name="rep" id="rep1" type="checkbox"/>
+            <label class="rep-label" for="rep1">SPAM</label>
+            <input name="rep" id="rep2" type="checkbox"/>
+            <label class="rep-label" for="rep2">PORNOGRAFIA</label>
+            <input name="rep" id="rep3" type="checkbox"/>
+            <label class="rep-label" for="rep3">ODRZUCAJĄCE TREŚCI</label>
+            <button onClick={this.handleClickReport2} class="btn">ZGŁOŚ</button>
+        </div>
+
+        <div id="report2" class="report none">
+            <h3 class="purple-text">ZGŁOŚ OFERTĘ</h3>
+            <h3>DZIĘKUJEMY ZA ZGŁOSZENIE OFERTY</h3>
+            <p>Właściciel oferty dostanie 100zł grzywny albo 25 lat wiezienia</p>
+            <img class="rep-img" src="{{url_for('static', filename='assets/images/twarz.png')}}" alt=""/>
+            <button onClick={this.handleClickEndReport} class="btn">GOTOWE</button>
+        </div>
+    </div>
+</main> 
+
+            )
+        }
+    }
+    ReactDOM.render(<App/>, document.getElementById('App'));
+</script>
+{% endblock content %}

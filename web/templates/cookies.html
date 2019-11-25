@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+ 
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/cookies.css')}}">{% endblock style %}
+{% block title %}<title>Jakiś tytuł</title>{% endblock title %}
+ 
+ 
+{% block content %}
+<script type="text/babel">
+    class App extends React.Component {
+    render() {  
+        return ( 
+<main >  
+    <div class="container">
+        <section >
+            <div class="grid" >
+                <div class="first-elem" >
+                    <h1>Zasady cookies używanych przez serwis CoZa500Plus</h1>
+                   
+                   <h3>To są zasady cookies dla serwisu CoZa500Plus, dostępne na <a href="#">www.coza500plus.pl.</a></h3>
+                </div>
+                <div class="first-elem" >
+                    <img src="{{url_for('static', filename='./assets/images/placeholder.png')}}" alt="Maszyna" />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="violet-color bottom-line" >
+                <h2>Zasady korzystania z serwisu.</h2>
+            </div>
+        </section>
+        <section>
+            <div class="second-elem" >
+                <h1>Czym są Cookies</h1>
+                    <p>Tak jak prawie wszystkie profesjonalne strony internetowe, 
+                        ta strona używa cookies – małych plików, które są pobierane
+                        na twój komputer, aby poprawić działanie serwisu. Ten dokument
+                        opisuje jakie informacje są przez nie zbierane, w jaki sposób
+                        ich używamy i dlaczego od czasu do czasu potrzebujemy 
+                        przechowywać te pliki. Powiemy ci także w jaki sposób możesz
+                        zablokować użycie cookies na serwisie, jednakże zablokowanie
+                         tej możliwości może pogorszyć wydajność lub „zepsuć” niektóre 
+                         elementy serwisu.  W celu zdobycia większej ilości informacji 
+                         na temat cookies przeczytaj poświęcony im artykuł na Wikipedii 
+                         <a href="https://pl.wikipedia.org/wiki/HTTP_cookie" target="_blank">
+                         (pl.wikipedia.org/wiki/HTTP_cookie).</a></p>
+
+                <h1>W jaki sposób używamy cookies</h1>
+                    <p>Używamy cookies z wielu powodów opisanych poniżej. Niestety w większości
+                    przypadków nie istnieje uniwersalne rozwiązanie blokujące cookies bez 
+                    jednoczesnego zablokowania wszystkich funkcji i funkcjonalności przez 
+                    nie dodawanych. Rekomendujemy zaakceptowanie użycia wszystkich cookies
+                    jeśli nie jesteś pewien czy ich potrzebujesz.</p>
+
+                <h1>Blokowanie cookies</h1> 
+                    <p>Aby dostosować ustawienia cookies, użyj ustawień przeglądarki 
+                    (sprawdź strony pomocy twojej przeglądarki, żeby dowiedzieć się jak to zrobić).
+                    Pamiętaj, że zablokowanie cookies będzie miało wpływ na wydajność i 
+                    niektóre funkcje tej i wielu innych stron internetowych, których używasz.
+                    Blokada cookies zazwyczaj prowadzi do ograniczenia lub wyłączenie niektórych
+                    funkcji tego serwisu. W związku z tym rekomendujemy pozostawienie ich włączonych.</p>
+
+                <h1>Cookies, które używamy:</h1>
+                <ul>
+                    <li>
+                        <p>Cookies powiązane z kontem użytkownika</p>
+                        <p>Jeśli utworzysz konto w serwisie, będziemy korzystać z cookies w celu 
+                        zarządzania procesem logowania i w ogólnych celach administracyjnych. Te 
+                        cookies zazwyczaj będą usuwane w momencie kiedy wylogujesz się ze swojego
+                        konta na serwisie, jednakże w niektórych przypadkach mogą one być pozostawione
+                        w celu zapamiętania twoich ustawień użytkownika po wylogowaniu.</p>  
+                    </li>
+                    <li>
+                        <p>Cookies powiązane z ustawieniami użytkownika</p>
+                        <p>W celu zapewnienia ci dobrego doświadczenia w czasie 
+                        korzystania z tej strony, zapewniamy ci możliwość dostosowania
+                         ustawień użytkownika. W celu zapamiętania twoich ustawień 
+                         potrzebujemy zapisywać cookies.</p>
+                         <h1>Pliki cookies stron trzecich</h1>
+                         <p>W niektórych specjalnych przypadkach używamy także plików cookies 
+                         dostarczanych przez zaufane strony trzecie. Ta sekcja omawia, jakie 
+                         cookies firm trzecich możesz napotkać podczas korzystania z tego serwisu.</p>
+                    </li>
+                    <li>
+                        <p>Ta strona korzysta z usługi Google Analytics, która jest jedną z 
+                        najbardziej rozpowszechnionych i zaufanych usług analitycznych.
+                        Google Analytics pomaga nam zrozumieć w jaki sposób używasz 
+                        naszego serwisu i w jaki sposób możemy poprawić twoje doświadczenie.
+                        Te cookies mogą śledzić takie aspekty jak np.: ile czasu spędzasz
+                        na podstronach i jakie podstrony odwiedzasz, co pomaga nam w 
+                        ciągłym ulepszaniu naszej zawartości tak, żeby była ona jak 
+                        najbardziej interesująca i przyjemna.</p>
+                        <p>Żeby zdobyć więcej informacji na temat cookies używanych przez
+                         Google Analytics, odwiedź oficjalną stronę usługi  
+                         <a href="https://analytics.google.com/analytics/web/provision/#/provision" target="_blank">
+                             (analytics.google.com/analytics/web/)</a>.</p>
+                    </li>
+                    <li>
+                        <p>Od czasu do czasu testujemy nowe funkcje i subtelnie zmieniamy 
+                        to w jaki strona wygląda. W czasie testowania nowych funkcji korzystamy
+                        z cookies żeby zapewnić - tobie jak najlepsze doświadczenie, a nam
+                        jak najdokładniejsze dane, dotyczące reakcji użytkowników na zmiany.</p>
+                    </li>
+                    <li>
+                        <p>Używamy reklam, aby zmniejszyć koszty prowadzenia tego serwisu i 
+                        zapewnić fundusze na przyszły rozwój. Cookies spersonalizowanych reklam 
+                        są zaprojektowane w taki sposób, aby zapewnić ci reklamy odpowiadające
+                         twoim zainteresowaniom przede wszystkim poprzez anonimowe śledzenie 
+                         twoich zainteresowań i reklamowanie rzeczy, podobnych do tych przez 
+                         ciebie przeglądanych.</p>
+                    </li>
+                </ul>
+                <h1>Więcej informacji</h1>
+                    <p>Mamy nadzieje, że pomogliśmy ci rozwiać jak najwięcej wątpliwości 
+                    dotyczących działania cookies. Przypominamy, że jeśli nie jesteś pewien 
+                    czy potrzebujesz cookies, bezpieczniej będzie jeśli pozostawisz je włączone.</p>
+                    <p>Jeśli dalej masz jakieś pytania lub wątpliwości, skontaktuj się z nami 
+                    poprzez formularz kontaktowy dostępny na <a href="#" target="_blank">www.coza500plus.pl.</a></p>
+            </div>
+        </section>
+    </div>
+</main> 
+        )
+    }            
+}
+    ReactDOM.render(<App/>, document.getElementById('App'));
+</script>
+{% endblock content %}

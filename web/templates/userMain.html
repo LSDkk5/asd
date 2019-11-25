@@ -1,0 +1,378 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='./styles/userMain')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="{{url_for('static', filename='./scripts/react.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/reactDom.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/babelScript.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='./styles/fonts/fonts.css')}}">
+
+    <!--<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">-->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <a href="#default" class="logo"><img src="{{url_for('static', filename='./assets/images/logo.png')}}"></a>
+            <div class="header-right">
+                <a href="#home">O Nas</a>
+                <a href="#contact">Kontakt</a>
+                <a href="#about">Logowanie</a>
+            </div>
+        </div>
+    </header>
+
+<div id="App">  
+    
+</div>                  
+
+    <footer>
+
+        <div class="footer">
+            <a>CoZa500Plus.pl</a>
+            <div class="footer-right">
+                <a href="#home">O Nas</a>
+                <a href="#contact">Kontakt</a>
+                <a href="#about">Logowanie</a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+<script type="text/babel">
+
+    class App extends React.Component {
+
+        handleClick1 = () => {
+            let elem = document.querySelector('.edit-interests');
+            let elem2= document.querySelector('.user');
+            elem2.classList.toggle('stealth')
+            elem.classList.toggle('disabled')
+            
+        }  
+
+         handleClick2 = (e) => {
+           console.log(e.target)
+            if(e.target.checked) {
+                e.target.parentNode.style.backgroundColor='blue';
+            }
+            
+        } 
+
+        handleChange = (e) => {
+            if(e.target.checked) {
+                e.target.parentNode.style.backgroundColor='blue';
+                console.log(e.target.checked);
+                console.log("CHECED");
+            }
+
+            else{
+                e.target.parentNode.style.backgroundColor='lightgray';
+                console.log(e.target.checked);
+                console.log("NOT CHECED");
+            }
+        }
+
+        render() {      
+
+            return(
+<div class="nie-wiem">
+    <h2 class="h1">Profil Użytkownika</h2>   
+    <div class="user">  
+    <div class="user-description">
+        <img src="{{url_for('static', filename='./assets/images/twarz.png')}}"/>
+        <h4>O mnie:</h4>
+        <p>Opis przykładowy Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet excepturi adipisci magnam repellat fugit lorem</p>
+    </div>
+
+    <div class="user-interests">
+        <h2>Witaj <b>Sample User</b></h2>
+        <h5> Zainteresowania: </h5>
+        <div class="wrapped-interests">
+            <div class="interest">
+                <div class="emoji">🍓</div>Zywnosc
+            </div>
+            <div class="interest">
+                <div class="emoji">🧸</div>Zabawki
+            </div>
+            <div class="interest">
+                <div class="emoji">✈️</div>Podroze
+            </div>
+            <div class="interest">
+                <div class="emoji">👲🏼</div> Papiez
+            </div>
+            <div class="interest">
+                <div class="emoji">👲🏼</div> Papiez
+            </div>
+            <div class="interest">
+                <div class="emoji">👲🏼</div> Papiez
+            </div>
+            <div class="interest">
+                <div class="emoji">👲🏼</div> Papiez
+            </div>
+        </div>
+      
+      <div class="ustawienia-usera">
+        <a href="../dzieci/dzieci.html"  >Dzieci</a><br/>
+        <a href="../edytuj-dane/edytuj_dane.html">Edytuj Dane</a><br/>
+        <a href="polubienia.html"  >Polubione</a><br/>
+        <a href="premium.html"  >Konto Premium</a><br/>
+        <a href="Wyloguj.html"  >Wyloguj</a><br/>
+      </div>
+      
+      <div class="edit" onClick={this.handleClick1}>Edytuj Zainteresowania </div>
+  </div>
+
+</div>
+
+
+
+<div class="edit-interests disabled">
+    <h2>Edytuj Zainteresowania</h2>
+
+    <div class="interests">
+        <input type="text" placeholder="🔦"/><br/>
+        <div class="linia"></div>
+        
+    <form>
+        <div class="all-interests">
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="1"/>
+            🍎 Żywność
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="2"/>
+            ⚽ Sport 
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="3"/>
+            🎮 Gry   
+        </label>
+        <label class="single-interest">
+            <input type="checkbox" name="interest" value="4"/>
+           ✈️ Podróże 
+        </label>
+
+        <label class="single-interest">
+                <input type="checkbox" name="interest" value="1"/>
+                🍎 Żywność
+
+            </label>
+            <label class="single-interest">
+                <input type="checkbox" name="interest" value="2"/>
+                ⚽ Sport 
+            </label>
+            <label class="single-interest">
+                <input type="checkbox" name="interest" value="3"/>
+                🎮 Gry   
+            </label>
+            <label class="single-interest">
+                <input type="checkbox" name="interest" value="4"/>
+               ✈️ Podróże 
+            </label>
+
+            <label class="single-interest">
+                    <input type="checkbox" name="interest" value="1"/>
+                    🍎 Żywność
+                
+                </label>
+                <label class="single-interest">
+                    <input type="checkbox" name="interest" value="2"/>
+                    ⚽ Sport 
+                </label>
+                <label class="single-interest">
+                    <input type="checkbox" name="interest" value="3"/>
+                    🎮 Gry   
+                </label>
+                <label class="single-interest">
+                    <input type="checkbox" name="interest" value="4"/>
+                   ✈️ Podróże 
+                </label>
+
+                <label class="single-interest">
+                        <input type="checkbox" name="interest" value="1"/>
+                        🍎 Żywność
+        
+                    </label>
+                    <label class="single-interest">
+                        <input type="checkbox" name="interest" value="2"/>
+                        ⚽ Sport 
+                    </label>
+                    <label class="single-interest">
+                        <input type="checkbox" name="interest" value="3"/>
+                        🎮 Gry   
+                    </label>
+                    <label class="single-interest">
+                        <input type="checkbox" name="interest" value="4"/>
+                       ✈️ Podróże 
+                    </label>  
+            </div> 
+
+            <input type="button" value="Anuluj" class="button" onClick={this.handleClick1}/>
+         <input type="submit" value="Zatwierdź" class="button"/>
+        </form>      
+        
+     </div> 
+    </div>
+
+   
+
+</div>
+            )
+        }
+    }
+    
+    ReactDOM.render(<App/>, document.getElementById('App'));
+
+</script>
+
+</html>
+

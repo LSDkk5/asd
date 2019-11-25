@@ -1,0 +1,85 @@
+{% extends "layaout.html" %}
+
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/admin/adminOffers.css')}}">{% endblock style %}
+{% block title %}{% endblock title %}
+
+
+{% block content %}
+<script type="text/babel">
+    class App extends React.Component {
+     state = {
+         reports: [
+             {id:1,offerId:1, userId:15, case:'Pornografia'},
+             {id:2,offerId:2, userId:15, case:'Propagowanie nienawiści'},
+             {id:3,offerId:3, userId:15, case:'Sranie'},
+             {id:4,offerId:4, userId:15, case:'AaaaaAaAaaa'},
+             {id:5,offerId:5, userId:15, case:'lorem ipsummmmmm'},
+             {id:6,offerId:6, userId:15, case:'Nie wiemmmmm'},
+             {id:7,offerId:7, userId:15, case:'XDDDDDDDDDD'},
+             {id:8,offerId:8, userId:15, case:'NUMBER 88888'},
+             {id:9,offerId:9, userId:15, case:'NUMBER 99999'},
+             {id:10,offerId:10, userId:15, case:'NUMBER 101010'},
+         ],
+
+         activeReport:''
+     }
+
+     handleClick = (e) => {
+        console.log(e.target.parentNode.id)
+        this.setState({
+            activeReport:this.state.reports[e.target.parentNode.id-1]
+        })
+     }
+
+    render() {  
+
+        const listOfOffers = this.state.reports ? (
+            this.state.reports.map( item => {
+                return(
+                <div id={item.id} class="offer" key={item.id}>
+                    <h3>ID OFERTY</h3>
+                    <h3>#{item.offerId}</h3>
+                    <h3>ID USERA</h3>
+                    <h3>#{item.userId}</h3>
+                    <button class="btn" onClick={this.handleClick}>Zobacz</button>
+                    <button class="btn">Usuń</button>
+                </div>
+                )
+            })
+        ) : (
+            <h1>Na razie nie żadnych zgłoszeń.</h1>
+        )  
+
+        const activeReport = this.state.activeReport ? (
+            <div>
+                <h1>{this.state.activeReport.id}</h1>
+            </div>
+        ) : (
+            <h1>NIE ZAZNACZONO ŻADNEJ OFERTY</h1>
+        )
+
+        return ( 
+<main>  
+    <div class="container-reports">
+        <section class="active-reports">
+            <img src="{{url_for('static', filename='./assets/images/logo.png')}}" alt=""/>
+            <div class="active-reports-child">
+                <h2 class="purple-text">Aktywne zgłoszenia ({this.state.reports.length})</h2>
+                <button class="btn">Wróć do panelu admina</button>
+            </div>
+        </section>   
+        <div class="offers-list">
+            {listOfOffers}
+        </div>
+
+        <div class="active-report">
+            {activeReport}
+        </div>
+    </div>
+</main> 
+        )
+    }            
+}
+    ReactDOM.render(<App/>, document.getElementById('App'));
+</script>
+{% endblock content %}

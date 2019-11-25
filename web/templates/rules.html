@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+ 
+{% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/rules.css')}}">{% endblock style %}
+{% block title %}<title>Jakiś tytuł</title>{% endblock title %}
+ 
+ 
+{% block content %}
+<script type="text/babel">
+    class App extends React.Component {
+    render() {  
+        return ( 
+<main >  
+    <div class="container" onScroll={this.handleScroll} onLoad={this.handleOnLoad}>
+        <section >
+            <div class="grid" >
+                <div class="first-elem" >
+                    <h1>Zasady i postanowienia</h1>
+                    <h2 class="left-align">Zapoznaj się z naszymi zasadami korzystania z serwisu oraz regulaminem.</h2>
+                    <a download href="{{url_for('static', filename='files/co_za_500_plus_regulamin.pdf')}}"><h3 class="with-icon">Pobierz regulamin w formacie pdf.</h3></a>
+                </div>
+                <div class="first-elem" >
+                    <img src="{{url_for('static', filename='assets/images/placeholder.png')}}" alt="Maszyna" />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="violet-color bottom-line" >
+                <h2>Zasady korzystania z serwisu.</h2>
+            </div>
+        </section>
+        <section>
+            <div class="second-elem" >
+                <p><b>1.</b> no i ja się pytam człowieku dumny ty jesteś z siebie zdajesz sobie sprawę z tego co robisz?masz ty wogóle rozum i </p>
+                <p><b>2.</b> godnośc człowieka?ja nie wiem ale żałosny typek z ciebie ,chyba nie pomyślałes nawet co robisz i kogo obrażasz</p>
+                <p><b>3.</b> możesz sobie obrażac tych co na to zasłużyli sobie ale nie naszego papieża polaka naszego rodaka wielką osobę ,i tak</p>
+                <p><b>4.</b> możesz sobie obrażac tych co na to zasłużyli sobie ale nie naszego papieża polaka naszego rodaka wielką osobę ,i tak</p>
+                <p><b>5.</b> rodzinie ale chyba ty nie wiem nie rozumiesz co to jest wiara .jeśli myslisz że jestes wspaniały to jestes zwykłym czubkiem którego k</p>
+                <p><b>6.</b> oś nie odizolował jeszcze od społeczeństwa ,nie wiem co w tym jest takie śmieszne ale czepcie się stalina albo hitlera albo innych</p>
+            </div>
+        </section>
+    </div>
+</main> 
+        )
+    }            
+}
+    ReactDOM.render(<App/>, document.getElementById('App'));
+</script>
+{% endblock content %}

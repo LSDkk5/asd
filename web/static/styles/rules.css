@@ -1,0 +1,181 @@
+body {
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: #fefefe;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px 10px;
+  box-shadow: 0px 10px 37px -13px rgba(0, 0, 0, 0.35);
+  color: grey;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.header a {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header a:active {
+  color: black;
+}
+
+.header-right {
+  float: right;
+  margin-top: 20px;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: #2f3543;
+  padding: 20px 10px;
+  color: #b4b4b4;
+  box-sizing: border-box;
+}
+
+.footer a {
+  float: left;
+  color: #b4b4b4;
+  text-align: center;
+  padding-left: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer a:active {
+  color: white;
+}
+
+.footer-right {
+  float: right;
+}
+
+.container {
+  margin: 3.1vw auto 10px;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 5vw;
+}
+
+.container a {
+  color: initial;
+}
+
+.container a h3 {
+  font-weight: 400;
+}
+
+.container a h2 {
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+  background: #fefefe;
+  color: #7600a1;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .first-elem {
+    text-align: left;
+  }
+  .first-elem img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: 100%;
+  }
+  .grid .first-elem {
+    text-align: center;
+  }
+  .grid .first-elem img {
+    width: 70%;
+  }
+  h1, h2, h3, p {
+    font-size: 1em;
+  }
+  .with-icon {
+    padding: 0 20px 0 0;
+  }
+}
+
+.first-elem {
+  box-sizing: border-box;
+  padding: 0 5vw 1vw;
+  text-align: left;
+}
+
+.violet-color {
+  color: #7600a1;
+}
+
+.bottom-line {
+  border-bottom: 3px solid #7600a1;
+  width: 80%;
+  max-width: 600px;
+  margin: 1vw auto 2vw;
+}
+
+.with-icon {
+  position: relative;
+  min-width: 300px;
+  text-align: left;
+}
+
+.with-icon::after {
+  content: url("FOLDER-kopia.svg");
+  position: absolute;
+  bottom: 0;
+  width: 35px;
+  height: 30px;
+  padding-left: .1vw;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.second-elem {
+  text-align: left;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.second-elem p {
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
