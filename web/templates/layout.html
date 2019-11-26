@@ -9,18 +9,78 @@
     <script src="{{url_for('static', filename='scripts/reactDom.js')}}"></script>
     <script src="{{url_for('static', filename='scripts/babelScript.js')}}"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='styles/fonts/fonts.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesfooter.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/navDeskop.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/navMobile.css')}}">
+    
 </head>
 <body>
+    <!--  DESKOP HEADER ----------------------------------------------------------->
     <header>
         <div class="header">
             <a href="#default" class="logo"><img src="{{url_for('static', filename='assets/images/logo.png')}}"></a>
-            <div class="header-right">
+            <nav class="header-right">
                 <a href="#home">O Nas</a>
                 <a href="#contact">Kontakt</a>
                 <a href="#about">Logowanie</a>
-            </div>
+            </nav>
         </div>
     </header>
+    <!--  DESKOP HEADER ----------------------------------------------------------->
+
+            <!--  WARUNEK NA USAWIENIE HEADERA (w Reakcie) 
+            
+            componentDidMount() {
+            window.addEventListener('resize', () => {
+            if(window.innerWidth < 500 || window.innerHeight < 500){this.setState({mobileHeader:true})}
+            else{this.setState({mobileHeader:false})}
+            }, true);
+            }
+
+            -->
+
+    <!--  MOBILE HEADER ----------------------------------------------------------->
+<script type="text/babel">
+    class headerMobile extends Component {
+
+        handleClick = () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navigation = document.querySelector('.navigation');
+            hamburger.classList.toggle('hamburger-active');
+            navigation.classList.toggle('navigation-active');
+        }
+        
+        render() {
+        return (
+            
+        <header>  
+            <div class="header-mobile">
+                <img src="{{url_for('static', filename='assets/images/logo.png')}}"/>
+                <button class="hamburger" onClick={this.handleClick}>
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner "></span>
+                    </span>
+                </button>
+                <div class="navigation">
+                    <ul class="navigation-list">
+                        <li class="navigation-item"><NavLink exact to="/">Home</NavLink></li>
+                        <li class="navigation-item"><NavLink to="/a">O nas</NavLink></li>
+                        <li class="navigation-item"><NavLink to="/w">Kontakt</NavLink></li>
+                        <li class="navigation-item"><NavLink to="/b">Logowanie</NavLink></li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="filler-mobile"></div>
+        </header>         
+            )
+        }
+    }
+</script>
+
+    <!--  MOBILE HEADER ----------------------------------------------------------->
+
+
 <div id="App">  
 </div>                  
     <footer>

@@ -74,7 +74,7 @@
                 for(let i=1; i<=this.state.howManyChildren; i++) {
                     let name = 'kid_'+i;
                     whatGender.push(
-                        <div class="select-gender" key={i}>
+                        <div className="select-gender" key={i}>
                      <p>{i}</p>
                      <img src="{{url_for('static', filename='./assets/images/baba.png')}}" alt=""/>
                      <img src="{{url_for('static', filename='./assets/images/chlop.png')}}" alt=""/>
@@ -91,14 +91,14 @@
             
 
             return(
-<div class="nie-wiem">
+<div className="nie-wiem">
     <form>
-        <div  class="po-rejestracji-elem --active">
-            <div class="po-rejestracji">
-                <div class="po-rejestracji-up">
+        <div  className="po-rejestracji-elem --active">
+            <div className="po-rejestracji">
+                <div className="po-rejestracji-up">
                 </div>
 
-                <div class="po-rejestracji-down">
+                <div className="po-rejestracji-down">
                     <h1>Witaj! </h1>
                     
                     
@@ -106,88 +106,88 @@
                     Pozwoli nam to znaleźdź oferty specjalne dla Ciebie!</p>
                     
 
-                <input  type="button" class="button" value="Dalej!" onClick={() => { this.handleClick(0,1)}}/>
+                <input  type="button" className="button" value="Dalej!" onClick={() => { this.handleClick(0,1)}}/>
                 </div>
             </div>
         </div>
 
-        <div  class="po-rejestracji-elem" >
-            <div class="po-rejestracji-2">
-                <div class="po-rejestracji-2-up">
+        <div  className="po-rejestracji-elem" >
+            <div className="po-rejestracji-2">
+                <div className="po-rejestracji-2-up">
                     <img src="{{url_for('static', filename='./assets/images/ludz.png')}}" alt=""/>
                     <h2>Dzieci</h2>
                     <p>Określ proszę ile masz dzieci</p>
                  </div>
                 
-                <div class="po-rejestracji-2-down">
-                    <h3 class="line-here">Ile masz pociech?</h3>   
-                    <div class="wrap-h-m-c">
-                        <label class="how-many-children" ><input type="radio" name="dzieci" value='1'onClick={this.handleInput}/></label>
-                        <label class="how-many-children"><input type="radio" name="dzieci" value='2' onClick={this.handleInput}/></label><br/>
-                        <label class="how-many-children"><input type="radio" name="dzieci" value='3' onClick={this.handleInput}/></label>
-                        <label class="how-many-children"><input type="radio" name="dzieci" value='4' onClick={this.handleInput}/></label><br/>
-                        <label class="how-many-children"><input type="radio" name="dzieci" value='5' onClick={this.handleInput}/></label>
-                        <label class="how-many-children"><input type="radio" name="dzieci" value='6' onClick={this.handleInput}/></label><br/>
-                        <label class="how-many-children"><input type="radio" name="dzieci" value='7' onClick={this.handleInput}/></label>
-                        <label class="how-many-children"><input type="radio" name="dzieci" value='8' onClick={this.handleInput}/></label><br/>
+                <div className="po-rejestracji-2-down">
+                    <h3 className="line-here">Ile masz pociech?</h3>   
+                    <div className="wrap-h-m-c">
+                        <label className="how-many-children" ><input type="radio" name="dzieci" value='1'onClick={this.handleInput}/></label>
+                        <label className="how-many-children"><input type="radio" name="dzieci" value='2' onClick={this.handleInput}/></label><br/>
+                        <label className="how-many-children"><input type="radio" name="dzieci" value='3' onClick={this.handleInput}/></label>
+                        <label className="how-many-children"><input type="radio" name="dzieci" value='4' onClick={this.handleInput}/></label><br/>
+                        <label className="how-many-children"><input type="radio" name="dzieci" value='5' onClick={this.handleInput}/></label>
+                        <label className="how-many-children"><input type="radio" name="dzieci" value='6' onClick={this.handleInput}/></label><br/>
+                        <label className="how-many-children"><input type="radio" name="dzieci" value='7' onClick={this.handleInput}/></label>
+                        <label className="how-many-children"><input type="radio" name="dzieci" value='8' onClick={this.handleInput}/></label><br/>
                     </div>
-                    <input type="button" class="button" value="Dalej" onClick={() => { this.handleClick(1,2)}}/>
+                    <input type="button" className="button" value="Dalej" onClick={() => { this.handleClick(1,2)}}/>
                 </div>       
             </div>
         </div>
 
-        <div  class="po-rejestracji-elem">
-            <div class="po-rejestracji-2">
-                <div class="po-rejestracji-2-up">
+        <div  className="po-rejestracji-elem">
+            <div className="po-rejestracji-2">
+                <div className="po-rejestracji-2-up">
                      <img src="{{url_for('static', filename='./assets/images/ludz.png')}}" alt=""/>
                     <h2>Płeć</h2>
                     <p>Określ płeć dzieci</p>            
                 </div>
     
-                <div class="po-rejestracji-2-down">
-                    <h3 class="line-here">Jakiej są płci?</h3>
+                <div className="po-rejestracji-2-down">
+                    <h3 className="line-here">Jakiej są płci?</h3>
 
                 <div id="E">
                     {whatGender}
                 </div>
 
-                    <input type="button" class="button" value="Dalej" onClick={() => { this.handleClick(2,3)}}/>
+                    <input type="button" className="button" value="Dalej" onClick={() => { this.handleClick(2,3)}}/>
                 </div>       
             </div>
         </div>
 
-        <div  class="po-rejestracji-elem">
-            <div class="po-rejestracji-2">
-                <div class="po-rejestracji-2-up">
+        <div  className="po-rejestracji-elem">
+            <div className="po-rejestracji-2">
+                <div className="po-rejestracji-2-up">
                     <img src="{{url_for('static', filename='./assets/images/ludz.png')}}" alt=""/>
                         <h2>Zainteresowania</h2>
                         <p>Zaznacz typy ofert, które Cię najbardziej interesują</p>
                 </div>
         
-                <div class="po-rejestracji-2-down">
-                    <h3 class="line-here">Typy ofert</h3>
-                    <div class="select-offers">
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='1' onClick={this.handleInput3}/>Zabawki</label>
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='2' onClick={this.handleInput3}/>Rozrywka</label>
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='3' onClick={this.handleInput3}/>Podroze</label>
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='4' onClick={this.handleInput3}/>Ciaza</label>
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='5' onClick={this.handleInput3}/>Akcesoria</label>
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='6' onClick={this.handleInput3}/>Edukacja</label>
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='7' onClick={this.handleInput3}/>Sport</label>
-                        <label class="select-offer"><input type="checkbox" name="select-interest" value='8' onClick={this.handleInput3}/>Kupony</label>
+                <div className="po-rejestracji-2-down">
+                    <h3 className="line-here">Typy ofert</h3>
+                    <div className="select-offers">
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='1' onClick={this.handleInput3}/>Zabawki</label>
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='2' onClick={this.handleInput3}/>Rozrywka</label>
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='3' onClick={this.handleInput3}/>Podroze</label>
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='4' onClick={this.handleInput3}/>Ciaza</label>
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='5' onClick={this.handleInput3}/>Akcesoria</label>
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='6' onClick={this.handleInput3}/>Edukacja</label>
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='7' onClick={this.handleInput3}/>Sport</label>
+                        <label className="select-offer"><input type="checkbox" name="select-interest" value='8' onClick={this.handleInput3}/>Kupony</label>
                     </div>
-                    <input type="button" class="button" value="Dalej" onClick={() => { this.handleClick(3,4)}}/>                
+                    <input type="button" className="button" value="Dalej" onClick={() => { this.handleClick(3,4)}}/>                
                 </div>       
             </div>
         </div>
 
-        <div  class="po-rejestracji-elem">
-            <div class="po-rejestracji">
-                <div class="po-rejestracji-up"></div>
-                <div class="po-rejestracji-down">
+        <div  className="po-rejestracji-elem">
+            <div className="po-rejestracji">
+                <div className="po-rejestracji-up"></div>
+                <div className="po-rejestracji-down">
                     <h1>Gotowe!</h1>
                     <p>Teraz możesz cieszyć się z pełni funkcjonalności serwisu CoZa500Plus.pl</p>           
-                    <button class="button">Dalej!</button>
+                    <button className="button">Dalej!</button>
                          
                 </div>
             </div>
