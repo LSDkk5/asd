@@ -3,39 +3,40 @@
 {% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/auth/login.css')}}">{% endblock style %}
 {% block title %}{% endblock title %}
 
-{% block content %}
-<script type="text/babel">
-    class App extends React.Component {
-        render() {
-            return (
-                <div class="container">
-                    <div class="pic"><br/>
-                        <img src="{{url_for('static', filename='assets/images/serca.png')}}" alt=""/>
-                        <h3>Szybki i nieograniczony dostęp do ofert które pokochasz!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis expedita tempora, quas corrupti tenetur labore pariatur quam at, unde laudantium, facilis dicta consequuntur amet, voluptatibus numquam ad incidunt explicabo optio.</p>
-                    </div>
-                    <form action="action_page.php" class="login">
-                        <div class="sth">
-                        <div class="h2-reg">Zaloguj się</div><div class="line"><span></span></div>
-                        </div>
-                        <label for="email">E-mail</label>
-                        <input class="enter-data" type="text" placeholder="" name="email" required/>
-                        <label for="psw">Hasło</label>
-                        <input class="enter-data" type="password" placeholder="" name="psw" required/>
-                        <div class="sth">
-                        <label for="remember"><p>Zapamiętaj hasło<input type="checkbox" name="regulamin"/></p></label>
-                        </div>
-                        <button type="submit" class="btn">Zaloguj się</button>
-                        <button class="btn" ><a href="Rejestracja.html">Zarejestruj się</a></button>
-                        <p>Nie pamiętasz hasła? Kliknij <a href="#">TUTAJ</a></p>
-                        <div class="left-right-line">Lub</div>
-                        <button class="btn fb">Zaloguj się z facebookiem</button>
-                        <button class="btn google">Zaloguj się z Google</button>
-                    </form>
-                </div>
-            )
-        }
-    }
-    ReactDOM.render(<App/>, document.getElementById('App'));
-</script>
-{% endblock content %}
+{% block auth %}
+    <div class="container">
+        <div class="pic"><br/>
+            <img src="{{url_for('static', filename='assets/images/serca.png')}}" alt=""/>
+            <h3>Szybki i nieograniczony dostęp do ofert które pokochasz!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis expedita tempora, quas corrupti tenetur labore pariatur quam at, unde laudantium, facilis dicta consequuntur amet, voluptatibus numquam ad incidunt explicabo optio.</p>
+        </div>
+        <form action="action_page.php" class="login">
+            <div class="sth">
+            <div class="h2-reg">Zaloguj się</div><div class="line"><span></span></div>
+            </div>
+            <label for="email">E-mail</label>
+            <input class="enter-data" type="text" placeholder="" name="email" required/>
+            {% if form.username.errors %}
+            {{ form.username(class_="enter-data") }}
+            <div class="invalid-feedback">
+                {% for error in form.username.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.username(class_="enter-data") }}
+        {% endif %}
+            <label for="psw">Hasło</label>
+            <input class="enter-data" type="password" placeholder="" name="psw" required/>
+            <div class="sth">
+            <label for="remember"><p>Zapamiętaj hasło<input type="checkbox" name="regulamin"/></p></label>
+            </div>
+            <button type="submit" class="btn">Zaloguj się</button>
+            <button class="btn" ><a href="Rejestracja.html">Zarejestruj się</a></button>
+            <p>Nie pamiętasz hasła? Kliknij <a href="#">TUTAJ</a></p>
+            <div class="left-right-line">Lub</div>
+            <button class="btn fb">Zaloguj się z facebookiem</button>
+            <button class="btn google">Zaloguj się z Google</button>
+        </form>
+    </div>
+{% endblock auth %}

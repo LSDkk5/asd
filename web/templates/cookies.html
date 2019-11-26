@@ -6,7 +6,7 @@
  
 {% block content %}
 <script type="text/babel">
-    className App extends React.Component {
+    class App extends React.Component {
     render() {  
         return ( 
 <main >  
@@ -15,15 +15,13 @@
             <div className="grid" >
                 <div className="first-elem" >
                     <h1>Zasady cookies używanych przez serwis CoZa500Plus</h1>
-                   
                    <h3>To są zasady cookies dla serwisu CoZa500Plus, dostępne na <a href="#">www.coza500plus.pl.</a></h3>
                 </div>
                 <div className="first-elem" >
-                    <img src="{{url_for('static', filename='./assets/images/placeholder.png')}}" alt="Maszyna" />
+                    <img src="{{url_for('static', filename='assets/images/placeholder.png')}}" alt="Maszyna" />
                 </div>
             </div>
         </section>
-
         <section>
             <div className="violet-color bottom-line" >
                 <h2>Zasady korzystania z serwisu.</h2>

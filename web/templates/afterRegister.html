@@ -76,20 +76,13 @@
                     whatGender.push(
                         <div className="select-gender" key={i}>
                      <p>{i}</p>
-                     <img src="{{url_for('static', filename='./assets/images/baba.png')}}" alt=""/>
-                     <img src="{{url_for('static', filename='./assets/images/chlop.png')}}" alt=""/>
+                     <img src="{{url_for('static', filename='assets/images/baba.png')}}" alt=""/>
+                     <img src="{{url_for('static', filename='assets/images/chlop.png')}}" alt=""/>
                      <label><input type="radio" name={name} onClick={this.handleInput2}/></label>
                      <label><input type="radio" name={name} onClick={this.handleInput2}/></label>
                  </div>
                     )
                 }
-                
-                
-               
-             
-
-            
-
             return(
 <div className="nie-wiem">
     <form>
@@ -100,12 +93,8 @@
 
                 <div className="po-rejestracji-down">
                     <h1>Witaj! </h1>
-                    
-                    
                     <p>Nim przejdziemy dalej pozwól, że zapytamy Cię o kilka rzeczy.
                     Pozwoli nam to znaleźdź oferty specjalne dla Ciebie!</p>
-                    
-
                 <input  type="button" className="button" value="Dalej!" onClick={() => { this.handleClick(0,1)}}/>
                 </div>
             </div>
@@ -139,7 +128,7 @@
         <div  className="po-rejestracji-elem">
             <div className="po-rejestracji-2">
                 <div className="po-rejestracji-2-up">
-                     <img src="{{url_for('static', filename='./assets/images/ludz.png')}}" alt=""/>
+                     <img src="{{url_for('static', filename='assets/images/ludz.png')}}" alt=""/>
                     <h2>Płeć</h2>
                     <p>Określ płeć dzieci</p>            
                 </div>
@@ -159,7 +148,7 @@
         <div  className="po-rejestracji-elem">
             <div className="po-rejestracji-2">
                 <div className="po-rejestracji-2-up">
-                    <img src="{{url_for('static', filename='./assets/images/ludz.png')}}" alt=""/>
+                    <img src="{{url_for('static', filename='assets/images/ludz.png')}}" alt=""/>
                         <h2>Zainteresowania</h2>
                         <p>Zaznacz typy ofert, które Cię najbardziej interesują</p>
                 </div>
@@ -188,7 +177,6 @@
                     <h1>Gotowe!</h1>
                     <p>Teraz możesz cieszyć się z pełni funkcjonalności serwisu CoZa500Plus.pl</p>           
                     <button className="button">Dalej!</button>
-                         
                 </div>
             </div>
         </div>
@@ -197,9 +185,6 @@
             )
         }
     }
-
     ReactDOM.render(<App/>, document.getElementById('App'));
-
 </script>
-
 {% endblock content %}

@@ -10,7 +10,6 @@
         componentDidMount() {
     window.addEventListener('scroll', this.handleScroll, true);
      }
-
         handleOnLoad = (e) => {
             const moving = document.querySelectorAll(".moving"); 
             
@@ -20,12 +19,8 @@
                 console.log( parseInt(window.innerHeight + window.scrollY - e.offsetTop));
                 e.classList.add('doMnieMojaDesko'); 
             } 
-           
             })
-           
         }
-
-        
 
         handleScroll = (e) => {
         const moving = document.querySelectorAll(".moving"); 
@@ -38,34 +33,23 @@
             } 
             })   
         }
-
-
     render() {    
-
         return ( 
 <main>  
     <div className="container">
         <h2 className="gray-text-center">O projekcie...</h2>
-
         <h1 className="big-padding">Razem powiedzmy stanowcze <b>STOP</b> wprowadzaniu konsumenta w błąd</h1>
-
         <h2 className="bottom-line">Naszą misją jest dostarczenie narzędzia, które pozwoli w przyjemny i   
         szybko sposób otrzymywać spersonalizowane oferty zakupowe z całej sieci</h2>
-
-        <img src="{{url_for('static', filename='./assets/images/baner1.svg')}}" alt="" onLoad={this.handleOnLoad} onScroll={this.handleScroll} className="moving"/>
-
+        <img src="{{url_for('static', filename='assets/images/baner1.svg')}}" alt="" onLoad={this.handleOnLoad} onScroll={this.handleScroll} className="moving"/>
         <h1>Otrzymuj najwspanialsze okazje prosto na twój telefon i komputer</h1>
-
-        <img src="{{url_for('static', filename='./assets/images/baner2.svg')}}" alt=""   className="moving"/>
-
+        <img src="{{url_for('static', filename='assets/images/baner2.svg')}}" alt=""   className="moving"/>
         <h3>Uważamy, że użytkownicy mają prawo korzystać gdzie, i jak chcą. 
             Dlatego z naszego serwisu możesz korzystać według własnego upodobania.
         </h3>
-
         <p>Chcemy dać użytkownikowi możliwość wybierania pomiędzy ofertami zakupowymi.
         Ponieważ wierzymy, że konsumenci zasługują na łatwy dostęp do interesujących ich
         treści bez zbędnego spamu i śmieciowych linków</p>
-
         <p>Razem powiedzmy <b>STOP</b> wprowadzaniu konsumenta w błąd</p>
     </div>
 </main> 
