@@ -6,7 +6,7 @@
  
 {% block content %}
 <script type="text/babel">
-    class App extends React.Component {
+    className App extends React.Component {
         state = {
             isNewsLetterActive :false
         }
@@ -120,21 +120,21 @@
     render() {   
         const newsLetter = this.state.isNewsLetterActive ? (
 
-            <div class="newsletter">
-                <div class="newsletter-left">
-                    <div class="flying-exit" onClick={this.closeNewsLetter}>
+            <div className="newsletter">
+                <div className="newsletter-left">
+                    <div className="flying-exit" onClick={this.closeNewsLetter}>
                         <img src="{{url_for('static', filename='assets/images/exit.png')}}" alt=""/>
                     </div>
                     <img src="{{url_for('static', filename='assets/images/n1.png')}}" alt=""/>
                 </div>
-                <div class="newsletter-right">
+                <div className="newsletter-right">
                     <h1>Witaj!</h1>
                     <h3>Bądź na bieżąco z nowościami związanymi z serwisem</h3>
                     <form>
                         <input type="email" required placeholder="Podaj swój adres e-mail."/>
                     </form>
 
-                    <input type="submit" value="Gotowe!" class="btn purple-btn"/>
+                    <input type="submit" value="Gotowe!" className="btn purple-btn"/>
                 </div>
             </div>
 
@@ -145,95 +145,95 @@
         return ( 
 <main>  
     {newsLetter}
-    <div class="video2 hidden" onClick={this.handleClick2} >
+    <div className="video2 hidden" onClick={this.handleClick2} >
         <video  autoPlay controls >
             <source src="{{url_for('static', filename='assets/videos/advertisment.mp4')}}"  type="video/mp4"/>
         </video>
     </div>
-  <div class="container">
+  <div className="container">
     
 
-   <div class="overlay hidden" onClick={this.handleClickOv}></div>
+   <div className="overlay hidden" onClick={this.handleClickOv}></div>
 
-            <div class="video1 hidden" onClick={this.handleClick} >
+            <div className="video1 hidden" onClick={this.handleClick} >
                 
             </div>
 
             
 
 
-    <section class="grid  special" onScroll={this.handleScroll} onLoad={this.handleOnLoad}>
-        <div class="grid-elem-1">
+    <section className="grid  special" onScroll={this.handleScroll} onLoad={this.handleOnLoad}>
+        <div className="grid-elem-1">
             <h1>ZAPEWNIJ SOBIE WYGODĘ</h1>
             <i><p>Masz prawo odpocząć od irytujących, nietrafionych ofert i niechcianych ofert.</p></i>
             <p>Pragniemy Ci udostępnić proste i przejrzyste narzędzie, które pozwoli Ci oszczędić
             czas nerwy i pieniądze.</p>
             <p>Zacznij już dziś za darmo.</p>    
-            <button class="btn purple-btn  with-img-klod">Dołącz teraz</button>
-            <button class="btn white-btn moving left with-img-oko" >Zobacz więcej</button>       
+            <button className="btn purple-btn  with-img-klod">Dołącz teraz</button>
+            <button className="btn white-btn moving left with-img-oko" >Zobacz więcej</button>       
          </div>
 
-         <div class="grid-elem-2">
-            <div class="cent">
-                <img class="moving left" src="{{url_for('static', filename='assets/images/chmura.png')}}" alt=""/>
-                <img src="{{url_for('static', filename='assets/images/card.png')}}" alt="" class="over-img vert-move"/>
+         <div className="grid-elem-2">
+            <div className="cent">
+                <img className="moving left" src="{{url_for('static', filename='assets/images/chmura.png')}}" alt=""/>
+                <img src="{{url_for('static', filename='assets/images/card.png')}}" alt="" className="over-img vert-move"/>
             </div>
         </div>
     </section>
 
-    <section class="grid purple">
-            <div class="grid-elem-1">
+    <section className="grid purple">
+            <div className="grid-elem-1">
                 <h1>ZAKUPY W INTERNECIE, PO TWOJEMU</h1>
                 <i><p>NIEZALEŻNIE CZY TO NOWY UPOMINEK, UBRANIE CZY UPRAGNIONA WYCIECZKA.</p></i>
                 <p>Jesteś unikalny, korzystając z naszej aplikacji nigdy już nie będziesz "Kolejnym klientem".</p> 
 
-                <button class="btn purple-btn with-img-oko" onClick={this.handleClick2}>Zobacz video</button>
+                <button className="btn purple-btn with-img-oko" onClick={this.handleClick2}>Zobacz video</button>
             </div>
-            <div class="grid-elem-2">
-                <img class="moving left" src="{{url_for('static', filename='assets/images/72480187_1139453392927230_7778508410999275520_n.png')}}" alt=""/>
+            <div className="grid-elem-2">
+                <img className="moving left" src="{{url_for('static', filename='assets/images/72480187_1139453392927230_7778508410999275520_n.png')}}" alt=""/>
             </div>
     </section>
 
-    <section class="grid">
-            <div class="grid-elem-1">
+    <section className="grid">
+            <div className="grid-elem-1">
                 <h1>POSTAW NA WYJĄTKOWOŚĆ</h1>
                 <i><p>NIGDZIE NIE MA IDENTYCZNEGO PŁATKU ŚNIEGU, PODOBNIE JEST Z GUSTAMI. KAŻDYM MA INNY I TO JEST PIĘKNE</p></i>
                 <p>Sprzeciw się traktowaniu każdego z klientów jednakowo. W końcu nie jesteś jak inni.</p> 
-                <div class="text-and-img">
-                <img class="moving left" src="{{url_for('static', filename='assets/images/SWINIA.svg')}}" alt=""/><br/>
+                <div className="text-and-img">
+                <img className="moving left" src="{{url_for('static', filename='assets/images/SWINIA.svg')}}" alt=""/><br/>
                 OSZCZĘDZAJ
                 </div>
-                <div class="text-and-img">
-                <img class="moving left" src="{{url_for('static', filename='assets/images/IKONKA2.svg')}}" alt=""/><br/>
+                <div className="text-and-img">
+                <img className="moving left" src="{{url_for('static', filename='assets/images/IKONKA2.svg')}}" alt=""/><br/>
                 OTRZYMUJ
                 </div>
-                <div class="text-and-img">
-                <img class="moving left" src="{{url_for('static', filename='assets/images/IKONKA3.svg')}}" alt=""/><br/>
+                <div className="text-and-img">
+                <img className="moving left" src="{{url_for('static', filename='assets/images/IKONKA3.svg')}}" alt=""/><br/>
                 PROMUJ
                 </div>
             </div>
-            <div class="grid-elem-2">
-                <img class="moving left" src="{{url_for('static', filename='assets/images/obrazek.svg')}}" alt=""/>
+            <div className="grid-elem-2">
+                <img className="moving left" src="{{url_for('static', filename='assets/images/obrazek.svg')}}" alt=""/>
             </div>
     </section>
 
-    <section class="grid purple">  
-            <div class="grid-elem-1">
+    <section className="grid purple">  
+            <div className="grid-elem-1">
                 <h1>JUŻ WKRÓTCE</h1>
                 <i><p>ZAPEWNIJ NAJBLIŻSZYM ŚWIETLANĄ PRZYSZŁOŚĆ. W PROSTY SPOSÓB ZNAJDŹ NAJLEPSZE FUNDUSZE OSZCZĘDNOŚCIOWE</p></i>
                 <p>sposób aby zatroszczyć się o przyszłość bliskich!</p> 
                 <p>POMYŚL O PRZYSZŁOŚCI, TO SIĘ OPŁACI...</p>
-                <button class="btn purple-btn">Wkrótce  </button>
+                <button className="btn purple-btn">Wkrótce  </button>
             </div>
-            <div class="grid-elem-2 with-vid">
+            <div className="grid-elem-2 with-vid">
                 <video  controls preload="none">
                 <source src="{{url_for('static', filename='assets/videos/troska.mp4')}}"  type="video/mp4"/>
                 </video>
             </div>
     </section>
-    <h1 class="violet-big-margin">Skontaktuj się!</h1>
-    <section class="grid odd">
-            <div class="grid-elem-1">
+    <h1 className="violet-big-margin">Skontaktuj się!</h1>
+    <section className="grid odd">
+            <div className="grid-elem-1">
                 <form>
                     <h3>Nazwa</h3>
                     <input type="text" required/>
@@ -241,28 +241,28 @@
                     <input type="email" required/>
                     <h3>Treść</h3>
                     <textarea required max-length="1000" name="mess" id="mess" cols="30" rows="10"></textarea><br/>
-                    <button class="btn purple-btn">Wyślij</button>
+                    <button className="btn purple-btn">Wyślij</button>
                 </form>
                 <h3>Lub</h3>
                 <h3>Napisz na ten adres E-mail!</h3>
                 <h3>kontakt@coza500plus.pl</h3>
                 
             </div>
-            <div class="grid-elem-2">
+            <div className="grid-elem-2">
                 <img src="{{url_for('static', filename='assets/images/message.svg')}}" alt=""/>
-                <h1 class="icon-fb">/COZA500PLUS</h1>
-                <h1 class="icon-insta">@COZA500PLUS</h1>
+                <h1 className="icon-fb">/COZA500PLUS</h1>
+                <h1 className="icon-insta">@COZA500PLUS</h1>
             </div>
     </section>
 
-    <section class="grid purple">
-            <div class="grid-elem-1">
+    <section className="grid purple">
+            <div className="grid-elem-1">
                 <h1>ŚWIAT WSPANIAŁYCH OFERT STOI PRZED TOBĄ OTWOREM!</h1>
                 <img src="{{url_for('static', filename='assets/images/biale-tlo.png')}}" alt="500plus"/>
                 <h2>OSZCZĘDZAJ, OTRZYMUJ, PROMUJ</h2>
                 <h2>PREMIERA W LISTOPADZIE...</h2>
             </div>
-            <div class="grid-elem-2">
+            <div className="grid-elem-2">
                 <img src="{{url_for('static', filename='assets/images/baner2.svg')}}" alt=""/>
             </div>
     </section>

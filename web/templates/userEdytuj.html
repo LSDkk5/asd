@@ -12,20 +12,20 @@
         render() {      
 
             return(
-<div class="edit-data">
+<div className="edit-data">
         <h2>Edytuj dane</h2>
-        <label class="edit-img"><input type="file"/><img src=""/></label>
+        <label className="edit-img"><input type="file"/><img src=""/></label>
         <p>Nazwa</p>
         <input type="text"/><br/>
-        <div class="sth">
+        <div className="sth">
             <input id="m" type="radio" name="plec" value='m' />
-            <label for="m" class="sex">Mężczyzna</label>
+            <label for="m" className="sex">Mężczyzna</label>
             <input id="k" type="radio" name="plec" value='k'/> 
-            <label for="k" class="sex">Kobieta</label><br/>
+            <label for="k" className="sex">Kobieta</label><br/>
         </div>
-        <a href="#"><input type="button" class="button change-pass" value="Zmień hasło"/></a>
-        <a href="../user-main/user.html"><input type="button" value="Anuluj" class="button"/></a>
-        <button class="button">Zatwierdz</button>
+        <a href="#"><input type="button" className="button change-pass" value="Zmień hasło"/></a>
+        <a href="../user-main/user.html"><input type="button" value="Anuluj" className="button"/></a>
+        <button className="button">Zatwierdz</button>
 </div>
             )
         }

@@ -7,7 +7,7 @@
 {% block content %}
 <script type="text/babel">
 
-    class App extends React.Component {
+    className App extends React.Component {
 
         handleClick1 = () => {
             let elem = document.querySelector('.edit-interests');
@@ -42,43 +42,43 @@
         render() {      
 
             return(
-<div class="nie-wiem">
-    <h2 class="h1">Profil Użytkownika</h2>   
-    <div class="user">  
-    <div class="user-description">
+<div className="nie-wiem">
+    <h2 className="h1">Profil Użytkownika</h2>   
+    <div className="user">  
+    <div className="user-description">
         <img src="{{url_for('static', filename='./assets/images/twarz.png')}}"/>
         <h4>O mnie:</h4>
         <p>Opis przykładowy Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet excepturi adipisci magnam repellat fugit lorem</p>
     </div>
 
-    <div class="user-interests">
+    <div className="user-interests">
         <h2>Witaj <b>Sample User</b></h2>
         <h5> Zainteresowania: </h5>
-        <div class="wrapped-interests">
-            <div class="interest">
-                <div class="emoji">🍓</div>Zywnosc
+        <div className="wrapped-interests">
+            <div className="interest">
+                <div className="emoji">🍓</div>Zywnosc
             </div>
-            <div class="interest">
-                <div class="emoji">🧸</div>Zabawki
+            <div className="interest">
+                <div className="emoji">🧸</div>Zabawki
             </div>
-            <div class="interest">
-                <div class="emoji">✈️</div>Podroze
+            <div className="interest">
+                <div className="emoji">✈️</div>Podroze
             </div>
-            <div class="interest">
-                <div class="emoji">👲🏼</div> Papiez
+            <div className="interest">
+                <div className="emoji">👲🏼</div> Papiez
             </div>
-            <div class="interest">
-                <div class="emoji">👲🏼</div> Papiez
+            <div className="interest">
+                <div className="emoji">👲🏼</div> Papiez
             </div>
-            <div class="interest">
-                <div class="emoji">👲🏼</div> Papiez
+            <div className="interest">
+                <div className="emoji">👲🏼</div> Papiez
             </div>
-            <div class="interest">
-                <div class="emoji">👲🏼</div> Papiez
+            <div className="interest">
+                <div className="emoji">👲🏼</div> Papiez
             </div>
         </div>
       
-      <div class="ustawienia-usera">
+      <div className="ustawienia-usera">
         <a href="../dzieci/dzieci.html"  >Dzieci</a><br/>
         <a href="../edytuj-dane/edytuj_dane.html">Edytuj Dane</a><br/>
         <a href="polubienia.html"  >Polubione</a><br/>
@@ -86,232 +86,232 @@
         <a href="Wyloguj.html"  >Wyloguj</a><br/>
       </div>
       
-      <div class="edit" onClick={this.handleClick1}>Edytuj Zainteresowania </div>
+      <div className="edit" onClick={this.handleClick1}>Edytuj Zainteresowania </div>
   </div>
 
 </div>
 
 
 
-<div class="edit-interests disabled">
+<div className="edit-interests disabled">
     <h2>Edytuj Zainteresowania</h2>
 
-    <div class="interests">
+    <div className="interests">
         <input type="text" placeholder="🔦"/><br/>
-        <div class="linia"></div>
+        <div className="linia"></div>
         
     <form>
-        <div class="all-interests">
-        <label class="single-interest">
+        <div className="all-interests">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="1"/>
             🍎 Żywność
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="2"/>
             ⚽ Sport 
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="3"/>
             🎮 Gry   
         </label>
-        <label class="single-interest">
+        <label className="single-interest">
             <input type="checkbox" name="interest" value="4"/>
            ✈️ Podróże 
         </label>
 
-        <label class="single-interest">
+        <label className="single-interest">
                 <input type="checkbox" name="interest" value="1"/>
                 🍎 Żywność
 
             </label>
-            <label class="single-interest">
+            <label className="single-interest">
                 <input type="checkbox" name="interest" value="2"/>
                 ⚽ Sport 
             </label>
-            <label class="single-interest">
+            <label className="single-interest">
                 <input type="checkbox" name="interest" value="3"/>
                 🎮 Gry   
             </label>
-            <label class="single-interest">
+            <label className="single-interest">
                 <input type="checkbox" name="interest" value="4"/>
                ✈️ Podróże 
             </label>
 
-            <label class="single-interest">
+            <label className="single-interest">
                     <input type="checkbox" name="interest" value="1"/>
                     🍎 Żywność
                 
                 </label>
-                <label class="single-interest">
+                <label className="single-interest">
                     <input type="checkbox" name="interest" value="2"/>
                     ⚽ Sport 
                 </label>
-                <label class="single-interest">
+                <label className="single-interest">
                     <input type="checkbox" name="interest" value="3"/>
                     🎮 Gry   
                 </label>
-                <label class="single-interest">
+                <label className="single-interest">
                     <input type="checkbox" name="interest" value="4"/>
                    ✈️ Podróże 
                 </label>
 
-                <label class="single-interest">
+                <label className="single-interest">
                         <input type="checkbox" name="interest" value="1"/>
                         🍎 Żywność
         
                     </label>
-                    <label class="single-interest">
+                    <label className="single-interest">
                         <input type="checkbox" name="interest" value="2"/>
                         ⚽ Sport 
                     </label>
-                    <label class="single-interest">
+                    <label className="single-interest">
                         <input type="checkbox" name="interest" value="3"/>
                         🎮 Gry   
                     </label>
-                    <label class="single-interest">
+                    <label className="single-interest">
                         <input type="checkbox" name="interest" value="4"/>
                        ✈️ Podróże 
                     </label>  
             </div> 
 
-            <input type="button" value="Anuluj" class="button" onClick={this.handleClick1}/>
-         <input type="submit" value="Zatwierdź" class="button"/>
+            <input type="button" value="Anuluj" className="button" onClick={this.handleClick1}/>
+         <input type="submit" value="Zatwierdź" className="button"/>
         </form>      
         
      </div> 
