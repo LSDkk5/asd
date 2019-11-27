@@ -45,6 +45,7 @@ def register():
                 form.password.data),
             registered_on=datetime.now().strftime('%m-%d-%Y'),
             registered_time=datetime.now().strftime('%H:%M'))
+        print(newUser)
         db.session.add(newUser)
         db.session.commit()
 

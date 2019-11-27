@@ -21,7 +21,7 @@
             <nav class="header-right">
             {% if current_user.is_authenticated %}
                 <a href="#home">Oferty</a>
-                <a href="#">{{ current_user.name }}</a>
+                <a href="#">{{ current_user.username }}</a>
             {% else %}
                 <a href="#home">O Nas</a>
                 <a href="#contact">Kontakt</a>

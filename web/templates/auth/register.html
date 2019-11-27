@@ -4,30 +4,63 @@
 {% block style %}<link rel="stylesheet" href="{{url_for('static', filename='styles/auth/register.css')}}">{% endblock style %}
 {% block title %}<title>Rejestracja</title>{% endblock title %}
 
-{% block content %}
-<script type="text/babel">
-        class App extends React.Component {
-            render() {       
-                return ( 
+{% block auth %}
                 <div class="container">
                     <div class="pic">
                         <img src="{{url_for('static', filename='assets/images/serca.png')}}" alt=""/>
                         <h3>Szybki i nieograniczony dostęp do ofert które pokochasz!</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis expedita tempora, quas corrupti tenetur labore pariatur quam at, unde laudantium, facilis dicta consequuntur amet, voluptatibus numquam ad incidunt explicabo optio.</p>
                     </div>
-                    <form action="action_page.php" class="register">
+                    <form action="#" method="POST" class="register">
+                    {{ form.csrf_token }}
                         <div class="sth">
                             <div class="h2-reg">Zarejestruj się</div><div class="line"><span></span></div>
                         </div>  
                         <label for="username"></label>
-                        <input class="enter-data" type="text" placeholder="Nazwa Użytkownika" name="Username" required/>
+                        {% if form.username.errors %}
+                            {{ form.username(class_="enter-data") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.username.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.username(class_="enter-data") }}
+                        {% endif %}
                         <label for="email"></label>
-                        <input class="enter-data" type="text" placeholder="E-mail" name="email" required/>
+                        {% if form.email.errors %}
+                            {{ form.email(class_="enter-data") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class_="enter-data") }}
+                        {% endif %}
                         <label for="psw"></label>
-                        <input class="enter-data" type="password" placeholder="Hasło" name="psw" required/>
+                        {% if form.password.errors %}
+                            {{ form.password(class_="enter-data") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.password.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.password(class_="enter-data") }}
+                        {% endif %}
                         <label for="psw-repeat"></label>
-                        <input class="enter-data" type="password" placeholder="Potwierdź Hasło" name="psw-repeat" required/>
-                        <div class="sth">
+                       {% if form.confirmPassword.errors %}
+                            {{ form.confirmPassword(class_="enter-data") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.confirmPassword.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.confirmPassword(class_="enter-data") }}
+                        {% endif %}
+                        <!-- <div class="sth">
                             <input id="female" type="radio" name="sex" value="kobieta"/>
                         <label class="sex" for="female">Kobieta</label>
                             <input id="male" type="radio" name="sex" value="mezczyzna"/>
@@ -35,8 +68,8 @@
                         </div>
                         <label for="regulamin"><p>Akceptuję regulamin i politykę prywatności  <input type="checkbox" name="regulamin"/></p></label>
                         <label for="Accept_mail"><p>Wyrażam zgodę na otrzymywanie wiadomości <br/>
-                        e-mail związanych z CoZa500Plus  <input type="checkbox" name="regulamin"/></p></label>
-                        <button type="submit" class="registerbtn">Stwórz Konto</button>
+                        e-mail związanych z CoZa500Plus  <input type="checkbox" name="regulamin"/></p></label> -->
+                        {{ form.submit(class_="registerbtn") }}
                         <button class="btn" ><a href="Logowanie.html">Zaloguj się</a></button>
                         <div class="left-right-line">Lub <br/>skorzystaj z</div>
                                 <button class="btn fb">Facebook</button>
@@ -44,9 +77,4 @@
                         <p>Akceptując <a href="#">regulamin</a> akceptujesz cos tam cos tam</p>
                     </form>
                 </div>
-                )
-            }
-        }
-            ReactDOM.render(<App/>, document.getElementById('App'));
-    </script>
-{% endblock content %}
+{% endblock auth %}

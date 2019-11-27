@@ -632,51 +632,51 @@ input:checked + label {
 }
 
 .single-type:nth-child(1) label::before {
-  content: url("./ikony/agd.png");
+  content: url("agd.png");
 }
 
 .single-type:nth-child(1) input:checked + label::before {
-  content: url("./ikony/agd-white.png");
+  content: url("agd-white.png");
 }
 
 .single-type:nth-child(2) label::before {
-  content: url("./ikony/dziecko.png");
+  content: url("dziecko.png");
 }
 
 .single-type:nth-child(2) input:checked + label::before {
-  content: url("./ikony/dziecko-white.png");
+  content: url("dziecko-white.png");
 }
 
 .single-type:nth-child(3) label::before {
-  content: url("./ikony/elektronika.png");
+  content: url("elektronika.png");
 }
 
 .single-type:nth-child(3) input:checked + label::before {
-  content: url("./ikony/elektronika-white.png");
+  content: url("elektronika-white.png");
 }
 
 .single-type:nth-child(4) label::before {
-  content: url("./ikony/fundusz.png");
+  content: url("fundusz.png");
 }
 
 .single-type:nth-child(4) input:checked + label::before {
-  content: url("./ikony/fundusz-white.png");
+  content: url("fundusz-white.png");
 }
 
 .single-type:nth-child(5) label::before {
-  content: url("./ikony/leasing.png");
+  content: url("leasing.png");
 }
 
 .single-type:nth-child(5) input:checked + label::before {
-  content: url("./ikony/leasing-white.png");
+  content: url("leasing-white.png");
 }
 
 .single-type:nth-child(6) label::before {
-  content: url("./ikony/smoczek.png");
+  content: url("smoczek.png");
 }
 
 .single-type:nth-child(6) input:checked + label::before {
-  content: url("./ikony/smoczek-white.png");
+  content: url("smoczek-white.png");
 }
 
 .hot {

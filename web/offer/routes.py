@@ -3,30 +3,6 @@ from flask import Blueprint, render_template
 
 offers = Blueprint('offers', __name__)
 
-@offers.route('/api/offers', methods=['GET'])
-def show_all_offers():
-    pass 
-
-@offers.route('/api/offers/add', methods=['GET'])
-def add_offer_controller():
-    pass
-
-@offers.route('/api/offer/delete/<offer_id>', methods=['GET'])
-def delete_offer_controller(offer_id):
-    pass
-
-@offers.route('/api/offer/<offer_id>', methods=['GET'])
-def offer_detail(offer_id):
-    pass
-
-@offers.route('/api/offer/edit/<offer_id>', methods=['POST'])
-def edit_offer_controller(offer_id):
-    pass
-
-
-
-
-
 @offers.route('/offer/list', methods=['POST', 'GET'])
 def offer_lists():
     return render_template('offers.html')

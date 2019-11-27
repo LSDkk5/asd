@@ -25,7 +25,7 @@ class User(db.Model, UserMixin):
         default='/users/img/default.png')
 
     def __repr__(self):
-        return f"User<{self.id}, {self.username}, {self.email}>"
+        return f"{self.id}, {self.username}, {self.email}"
 
 
 class Token(db.Model):
