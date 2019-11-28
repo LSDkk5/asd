@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
     registered_on = db.Column(db.String(10), nullable=False)
-    registered_time = db.Column(db.String(5), nullable=False)
+    registered_time = db.Column(db.String(5), nullable=True)
     confirmed = db.Column(db.Boolean, nullable=False, default=False)
     last_change = db.Column(db.DateTime, nullable=True)
     avatar_path = db.Column(

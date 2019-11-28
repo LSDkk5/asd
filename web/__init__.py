@@ -21,11 +21,11 @@ from web.profile.routes import profile
 from web.home.routes import home
 from web.auth.routes import auth
 
-from api.auth import auth_api
+from api.auth import api_auth
 from api.users import api_users
 
 app.register_blueprint(home)
 app.register_blueprint(auth)
 app.register_blueprint(profile)
-app.register_blueprint(auth_api)
+app.register_blueprint(api_auth)
 app.register_blueprint(api_users)
