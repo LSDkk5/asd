@@ -6,15 +6,10 @@ from datetime import datetime
 from utils.token import generate_confirmation_token, confirm_token
 from utils.send_email import send_email
 from web.models import User
-from web import bcrypt, db
-from web import api
+from web import bcrypt, db, api
 
 api_auth = Blueprint('api_auth', __name__)
 
-
-class Register(Resource):
-    def post(self):
-        pass
 
 class Login(Resource):
     def post(self):
